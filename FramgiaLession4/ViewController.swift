@@ -7,13 +7,9 @@
 //
 
 import UIKit
-protocol passDataprotocol:class {
-    func FuncPassDataProtocol(with:String)
-    
-}
+
 class ViewController: UIViewController {
-    ///////  delegatePassData
-    weak var delegatePassData: passDataprotocol?
+   
  
     
     var closurePassDatatoView4: ((_ data:String) -> ())?
@@ -43,15 +39,20 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(blackview, animated: true)
     }
     @IBAction func passDataDelegate(_ sender: UIButton) {
-        let sbMain = UIStoryboard.init(name: "Main", bundle: nil)
-        let blackview = sbMain.instantiateViewController(withIdentifier: "blackview") as! BlackViewController
-//        self.delegatePassData = blackview
         
-        self.navigationController?.pushViewController(blackview, animated: true)
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? BlackViewController {
+            destination.delegate = self
+        }
+    }
+}
+
+extension ViewController:passDataprotocol {
+    func funcPassDataProtocol(with: String) {
+        print("\(with)")
     }
     
     
-    
 }
-

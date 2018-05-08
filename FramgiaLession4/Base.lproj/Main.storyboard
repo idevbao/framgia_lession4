@@ -54,15 +54,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKb-T4-CEt">
-                                <rect key="frame" x="244" y="617" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.76235037849999998" green="0.98358565409999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Delegate"/>
-                                <connections>
-                                    <action selector="passDataDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ll-iD-HQz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf8-kf-SHQ">
                                 <rect key="frame" x="16" y="617" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -70,6 +61,16 @@
                                 <state key="normal" title="Closure"/>
                                 <connections>
                                     <action selector="passDataClosure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VE2-N4-O1v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKb-T4-CEt">
+                                <rect key="frame" x="192" y="599" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76235037849999998" green="0.98358565409999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Delegate"/>
+                                <connections>
+                                    <action selector="passDataDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ll-iD-HQz"/>
+                                    <segue destination="GBG-C3-nd5" kind="push" id="k0W-KO-Efe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,6 +109,15 @@
                                 <state key="normal" title="GOtoview 3"/>
                                 <connections>
                                     <action selector="gotoView3:" destination="GBG-C3-nd5" eventType="touchUpInside" id="B2C-p3-ykS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QT-yh-hQ8">
+                                <rect key="frame" x="28" y="566" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.48151255310000002" blue="0.2019125464" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Protocol"/>
+                                <connections>
+                                    <action selector="backDataProtocol:" destination="GBG-C3-nd5" eventType="touchUpInside" id="FZZ-Xu-HM5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -224,6 +234,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0qz-N8-RG0"/>
+        <segue reference="k0W-KO-Efe"/>
     </inferredMetricsTieBreakers>
 </document>
